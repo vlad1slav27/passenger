@@ -13,7 +13,7 @@
 
 	<nav class="navbar navbar-expand-lg">
 	    <div class="container">
-	      <div class="navbar-brand">
+	      <div class="navbar-brand w-50">
 	        <a href="">
 	          <img src="favicon.png" alt="">
 	        </a>
@@ -25,13 +25,13 @@
 	      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 	        <ul class="navbar-nav ">
 	          <li class="nav-item mr-5">
-	            <a class="nav-link" href="#">услуги</a>
+	            <a class="nav-link" href="#services">услуги</a>
 	          </li>
 	           <li class="nav-item mr-5">
-	            <a class="nav-link" href="#">галерея</a>
+	            <a class="nav-link" href="#gallery">галерея</a>
 	          </li>
 	           <li class="nav-item mr-5">
-	            <a class="nav-link" href="#">контакты</a>
+	            <a class="nav-link" href="#contacts">контакты</a>
 	          </li>
 	        </ul>
 	      </div>
@@ -42,35 +42,35 @@
 	<main>
 		<section class="section-1 section--options">
 			<div class="container">
-				<h2 class="title title--white">услуги</h2>
+				<h2 class="title title--white" ">услуги</h2>
 				<div class="row d-flex justify-content-between">
 					<div class="col-md-6">
 						<div class="services">
-							<ul>
-								<li><i class="fas fa-caret-square-right"></i>Междугородние и городские перевозки</li>
-								<li><i class="fas fa-caret-square-right"></i>Обслуживание свадеб и корпоративов</li>
-								<li><i class="fas fa-caret-square-right"></i>Экскурсионные поездки</li>
-								<li><i class="fas fa-caret-square-right"></i>Трансфер в аэропорты, вокзалы</li>
+							<ul id="services">
+								<li><i class="fas fa-caret-square-right arrow-right"></i>Междугородние и городские перевозки</li>
+								<li><i class="fas fa-caret-square-right arrow-right"></i>Обслуживание свадеб и корпоративов</li>
+								<li><i class="fas fa-caret-square-right arrow-right"></i>Экскурсионные поездки</li>
+								<li><i class="fas fa-caret-square-right arrow-right"></i>Трансфер в аэропорты, вокзалы</li>
 							</ul>
 						</div>
 					</div>
 						<div class=" col-md-6">
 							<div class="services">
 								<ul>
-									<li><i class="fas fa-caret-square-right"></i>Туры выходного дня</li>
-									<li><i class="fas fa-caret-square-right"></i>Перевозка организованных групп детей</li>
-									<li><i class="fas fa-caret-square-right"></i>Паломнические перевозки</li>
-									<li><i class="fas fa-caret-square-right"></i>Развозка сотрудников</li>
+									<li><i class="fas fa-caret-square-right arrow-right"></i>Туры выходного дня</li>
+									<li><i class="fas fa-caret-square-right arrow-right"></i>Перевозка организованных групп детей</li>
+									<li><i class="fas fa-caret-square-right arrow-right"></i>Паломнические перевозки</li>
+									<li><i class="fas fa-caret-square-right arrow-right"></i>Развозка сотрудников</li>
 								</ul>
 							</div>
 						</div>
 				</div>
 			</div>
 		</section>
-		<section class="section-2 section--options">
+		<section class="section-2 section--options" >
 			<div class="container">
-				<h2 class="title">галерея</h2>
-				<h3 class="title__slide">Iveco Mago <br> 29 мест</h3>
+				<h2 class="title" >галерея</h2>
+				<h3 class="title__slide" id="gallery">Iveco Mago <br> 29 мест</h3>
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   					<ol class="carousel-indicators">
    						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -113,16 +113,16 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-3 section--options ">
+		<section class="section-3 section--options " >
 			<div class="container">
 				<h2 class="title">контакты</h2>
 				<div class="contacts">
-					<div class="row d-flex justify-content-between">
+					<div class="row d-flex justify-content-between" id="contacts">
 						<div class="col-md-6">
 							<div class="contacts__number">
-								<p><img class="img-brand" src="img/kyiv.png" alt="">  38(097)316-71-27 - Дмитрий</p>
-								<p><img class="img-brand" src="img/kyiv.png" alt="">38(098)067-68-77 - Геннадий</p>
-								<p><img class="img-brand" src="img/mts.png" alt="">38(095)291-94-24 - Геннадий</p>
+								<p><img class="img-brand" src="img/kyiv.png" alt=""><a class="tel" href="tel:+380973167127"> +38(097)316-71-27</a>- Дмитрий</p>
+								<p><img class="img-brand" src="img/kyiv.png" alt=""><a class="tel" href="tel:+380980676877"> +38(098)067-68-77</a> - Геннадий</p>
+								<p><img class="img-brand" src="img/mts.png" alt=""><a class="tel" href="tel:+380952919424">+ 38(095)291-94-24</a> - Геннадий</p>
 							</div>
 						</div>
 						<div class="col-md-6">
@@ -175,5 +175,68 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 	
 	<script src="js/bootstrap.min.js"></script>
+	
+	<script>
+		$('a[href*="#"]')
+		// Remove links that don't actually link to anything
+		.not('[href="#"]')
+		.not('[href="#0"]')
+		.click(function(event) {
+			// On-page links
+			if (
+				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+				&& 
+				location.hostname == this.hostname
+			) {
+				// Figure out element to scroll to
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				// Does a scroll target exist?
+				if (target.length) {
+					// Only prevent default if animation is actually gonna happen
+					event.preventDefault();
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000, function() {
+						// Callback after animation
+						// Must change focus!
+						var $target = $(target);
+						$target.focus();
+						if ($target.is(":focus")) { // Checking if the target was focused
+							return false;
+						} else {
+							$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+							$target.focus(); // Set focus again
+						};
+					});
+				}
+			}
+		});
+	
+	
+	$(document).ready(function(){
+	  $('body').append('<a href="#" id="go-top" title="Вверх"><i class="fas fa-arrow-up scroll-up"></i></a>');
+	});
+	
+	$(function() {
+	 $.fn.scrollToTop = function() {
+	  $(this).hide().removeAttr("href");
+	  if ($(window).scrollTop() >= "250") $(this).fadeIn("slow")
+	  var scrollDiv = $(this);
+	  $(window).scroll(function() {
+	   if ($(window).scrollTop() <= "250") $(scrollDiv).fadeOut("slow")
+	   else $(scrollDiv).fadeIn("slow")
+	  });
+	  $(this).click(function() {
+	   $("html, body").animate({scrollTop: 0}, "slow")
+	  })
+	 }
+	});
+	
+	$(function() {
+	 $("#go-top").scrollToTop();
+	});
+	</script>
+
 </body>
 </html>
